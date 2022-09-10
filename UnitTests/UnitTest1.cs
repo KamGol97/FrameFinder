@@ -2,6 +2,7 @@ using System;
 using System.Text;
 
 using Perun.FrameFinder;
+using Perun.FrameFinder.Factory;
 
 namespace UnitTests;
 
@@ -13,17 +14,17 @@ public class FinderTests
 
         Random rng= new Random();
 
-        byte[] preamble = new byte[rng.NextInt64(0, 10)] ;
+        byte[] prefix = new byte[rng.NextInt64(0, 10)] ;
 
-        rng.NextBytes(preamble);
+        rng.NextBytes(prefix);
 
         byte[] data = new byte[rng.NextInt64(0, 30)];
 
-        rng.NextBytes(preamble);
+        rng.NextBytes(prefix);
 
         List<byte> message = new();
 
-        message.AddRange(preamble);
+        message.AddRange(prefix);
         message.AddRange(data);
 
 
@@ -40,15 +41,17 @@ public class FinderTests
             wholeMessage.AddRange(message);
         }
 
-        var finder = new FinderBuilder().Build();
+        var finder = new FinderFactory_Prefix_FixedLenght(new ())
+            .AddPrefix(prefix);
 
         finder.FeedMe(wholeMessage);
 
-        var foundItems=finder.Find();
-        if (foundItems != howMmay)
+        var foundItems =finder.Find();
+
+        if (foundItems.Length != howMmay)
             throw new Exception($"found:{foundItems}, expected:{howMmay}. ");
 
-        Assert.Equal(foundItems, howMmay);
+        Assert.Equal(foundItems.Length, howMmay);
     }
 
     public static string RandomString(int length)

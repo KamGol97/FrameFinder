@@ -19,5 +19,21 @@ public interface IFinder
     /// Returns count of matched elements in data.
     /// </summary>
     /// <returns></returns>
-    int Find();
+    object[] Find();
+
+
+    /// <summary>
+    /// Removes all bytes from finder queue.
+    /// </summary>
+    void Clean();
+
+    byte[] GetData { get; }
+
+    long DataLenght { get; }
+
+    bool CircularSearching { get; set; }
+
+    event EventHandler<object> FrameFound;
+
+    FinderComponent[] Components { get; }
 }
