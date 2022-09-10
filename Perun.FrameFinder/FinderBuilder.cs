@@ -10,8 +10,6 @@ namespace Perun.FrameFinder;
 
 public class FinderBuilder
 {
-
-
     public IFinder Build()
     {
         return new Finder();

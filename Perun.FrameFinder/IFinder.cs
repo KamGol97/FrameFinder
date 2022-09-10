@@ -20,7 +20,4 @@ public interface IFinder
     /// </summary>
     /// <returns></returns>
     int Find();
-    
-
-    
 }
