@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perun.FrameFinder", "Perun.FrameFinder.csproj", "{90F2478D-131E-48C8-A03B-105EF4522A99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{D7F17A2E-CBCD-4570-A0B9-1448902E7A24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F2478D-131E-48C8-A03B-105EF4522A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F2478D-131E-48C8-A03B-105EF4522A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F2478D-131E-48C8-A03B-105EF4522A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F2478D-131E-48C8-A03B-105EF4522A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F17A2E-CBCD-4570-A0B9-1448902E7A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F17A2E-CBCD-4570-A0B9-1448902E7A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F17A2E-CBCD-4570-A0B9-1448902E7A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F17A2E-CBCD-4570-A0B9-1448902E7A24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {261A1CA2-5543-481C-9A31-4944185FED97}
+	EndGlobalSection
+EndGlobal
