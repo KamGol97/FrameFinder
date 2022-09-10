@@ -1,3 +1,7 @@
-/bin/
-/obj/
-/.vs/
+Perun.FrameFinder/bin/
+Perun.FrameFinder/obj/
+Perun.FrameFinder/.vs/
+
+UnitTests/bin/
+UnitTests/obj/
+UnitTests/.vs/
